@@ -105,29 +105,6 @@ h1 {
   }
 }
 
-@media screen and (min-width: 920px) {
-  .btn-hamburger {
-    display: none;
-  }
-}
-
-.btn-hamburger {
-  margin-bottom: auto;
-  margin-left: auto;
-  padding: 0 0 2em 2em;
-  background-color: inherit;
-  border: none;
-  width: auto;
-}
-
-.btn-bar {
-  width: 51px;
-  height: 6px;
-  background-color: white;
-  margin: 7px 0;
-  border-radius: 6px;
-}
-
 img {
   width: 100%;
 }
@@ -396,4 +373,140 @@ ul {
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: auto;
   }
+}
+
+/* Allt som tillhör po-fönstret */
+
+@media screen and (min-width: 920px) {
+  .btn-hamburger {
+    display: none;
+  }
+}
+
+.btn-hamburger {
+  margin-bottom: auto;
+  margin-left: auto;
+  padding: 0 0 2em 2em;
+  background-color: inherit;
+  border: none;
+  width: auto;
+}
+
+.btn-bar {
+  width: 51px;
+  height: 6px;
+  background-color: white;
+  margin: 7px 0;
+  border-radius: 6px;
+}
+
+.btn-navbar {
+  display: none;
+}
+
+.btn-navbarvisable {
+  display: flex;
+  background-color: #e3170a;
+}
+
+/* Allt som har med JavaScript */
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 20ms;
+  z-index: 10;
+  background-color: #011827;
+  width: 90%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-header .close-button {
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 4.25rem;
+  font-weight: 100;
+  position: absolute;
+  top: -10px;
+  right: -120px;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: 20ms;
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Allt som rör hamburgar menyn */
+
+.btn-hamburger {
+  margin-bottom: auto;
+  margin-left: auto;
+  padding: 0 0 2em 2em;
+  background-color: inherit;
+  border: none;
+  width: auto;
+}
+
+.btn-bar {
+  width: 51px;
+  height: 6px;
+  background-color: #ffffff;
+  margin: 7px 0;
+  border-radius: 6px;
+}
+
+.btn-navbar-list {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+}
+
+.btn-navbar-link {
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  font-weight: 700;
+  font-size: 1.8rem;
 }
