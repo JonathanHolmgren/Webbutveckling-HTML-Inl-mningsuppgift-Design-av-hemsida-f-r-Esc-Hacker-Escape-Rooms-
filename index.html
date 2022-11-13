@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hacker Escape Rooms</title>
-    <!--  <link rel="stylesheet" href="./style/main.css"> /-->
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,14 +14,43 @@
     />
   </head>
   <body>
+
+
     <header class="header">
-      <img class="header-logo" src="./picture/logoSVG.svg" alt="header-logo" />
+      <img class="header-logo" src="./picture/logo.svg" alt="header-logo" />
       <h1 class="header-title">Hacker Escape Rooms</h1>
-      <button class="btn-hamburger">
+      
+      <button data-modal-target="#modal" class="btn-hamburger">
         <div class="btn-bar"></div>
         <div class="btn-bar"></div>
         <div class="btn-bar"></div>
       </button>
+
+      <div class="modal" id="modal">
+        <div class="modal-header">
+           
+          <button data-close-button class="close-button">&times;</button>
+        </div>
+
+      <nav class="modal-body">
+        <ul class="btn-navbar-list">
+          <li>
+            <a class="btn-navbar-link" href="">Play Online</a>
+          </li>
+          <li>
+            <a class="btn-navbar-link" href="">Play on-site</a>
+          </li>
+          <li>
+            <a class="btn-navbar-link" href="">The story</a>
+          </li>
+          <li>
+            <a class="btn-navbar-link" href="">Contact us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div  id="overlay"></div>
+
     </header>
 
     <nav class="navbar">
@@ -48,7 +76,7 @@
     <main>
       <img
         class="bg-img"
-        src="./picture/hacker_bg.png"
+        src="./picture/hacker_room.png"
         alt="background image"
       />
       <section class="btn-challanges-top">
@@ -104,72 +132,27 @@
               <div class="challenges-rating">
                 <img
                   class="rating-img"
-                  src="./picture/StarFilledSVG.svg"
+                  src="./picture/StarFilled.svg"
                   alt="Rating image"
                 />
                 <img
                   class="rating-img"
-                  src="./picture/StarFilledSVG.svg"
+                  src="./picture/StarFilled.svg"
                   alt="Rating image"
                 />
                 <img
                   class="rating-img"
-                  src="./picture/StarFilledSVG.svg"
+                  src="./picture/StarFilled.svg"
                   alt="Rating image"
                 />
                 <img
                   class="rating-img"
-                  src="./picture/StarFilledSVG.svg"
+                  src="./picture/StarFilled.svg"
                   alt="Rating image"
                 />
                 <img
                   class="rating-img"
-                  src="./picture/StarEmptySVG.svg"
-                  alt="Rating image"
-                />
-                <p class="rating-participants">2-6 participants</p>
-              </div>
-              <p class="rating-description">
-                Praeterea, ex culpa non invenies unum aut non accusatis unum. Et
-                nihil inuitam. Nemo nocere tibi erit, et non inimicos, et
-              </p>
-              <button class="btn-primary-white">Book this room</button>
-            </div>
-          </div>
-          <div class="popular-challenges">
-            <img
-              class="hacker-room-img"
-              src="./picture/hacker_room.png"
-              alt="Popular Challenges image"
-            />
-            <div class="popular-challenges-wrapper">
-              <h3 class="popular-challenges-subtitle">
-                Title of room (on-site)
-              </h3>
-              <div class="challenges-rating">
-                <img
-                  class="rating-img"
-                  src="./picture/StarFilledSVG.svg"
-                  alt="Rating image"
-                />
-                <img
-                  class="rating-img"
-                  src="./picture/StarFilledSVG.svg"
-                  alt="Rating image"
-                />
-                <img
-                  class="rating-img"
-                  src="./picture/StarFilledSVG.svg"
-                  alt="Rating image"
-                />
-                <img
-                  class="rating-img"
-                  src="./picture/StarFilledSVG.svg"
-                  alt="Rating image"
-                />
-                <img
-                  class="rating-img"
-                  src="./picture/StarEmptySVG.svg"
+                  src="./picture/StarEmpty.svg"
                   alt="Rating image"
                 />
                 <p class="rating-participants">2-6 participants</p>
@@ -194,27 +177,72 @@
               <div class="challenges-rating">
                 <img
                   class="rating-img"
-                  src="./picture/StarFilledSVG.svg"
+                  src="./picture/StarFilled.svg"
                   alt="Rating image"
                 />
                 <img
                   class="rating-img"
-                  src="./picture/StarFilledSVG.svg"
+                  src="./picture/StarFilled.svg"
                   alt="Rating image"
                 />
                 <img
                   class="rating-img"
-                  src="./picture/StarFilledSVG.svg"
+                  src="./picture/StarFilled.svg"
                   alt="Rating image"
                 />
                 <img
                   class="rating-img"
-                  src="./picture/StarFilledSVG.svg"
+                  src="./picture/StarFilled.svg"
                   alt="Rating image"
                 />
                 <img
                   class="rating-img"
-                  src="./picture/StarEmptySVG.svg"
+                  src="./picture/StarEmpty.svg"
+                  alt="Rating image"
+                />
+                <p class="rating-participants">2-6 participants</p>
+              </div>
+              <p class="rating-description">
+                Praeterea, ex culpa non invenies unum aut non accusatis unum. Et
+                nihil inuitam. Nemo nocere tibi erit, et non inimicos, et
+              </p>
+              <button class="btn-primary-white">Book this room</button>
+            </div>
+          </div>
+          <div class="popular-challenges">
+            <img
+              class="hacker-room-img"
+              src="./picture/hacker_room.png"
+              alt="Popular Challenges image"
+            />
+            <div class="popular-challenges-wrapper">
+              <h3 class="popular-challenges-subtitle">
+                Title of room (on-site)
+              </h3>
+              <div class="challenges-rating">
+                <img
+                  class="rating-img"
+                  src="./picture/StarFilled.svg"
+                  alt="Rating image"
+                />
+                <img
+                  class="rating-img"
+                  src="./picture/StarFilled.svg"
+                  alt="Rating image"
+                />
+                <img
+                  class="rating-img"
+                  src="./picture/StarFilled.svg"
+                  alt="Rating image"
+                />
+                <img
+                  class="rating-img"
+                  src="./picture/StarFilled.svg"
+                  alt="Rating image"
+                />
+                <img
+                  class="rating-img"
+                  src="./picture/StarEmpty.svg"
                   alt="Rating image"
                 />
                 <p class="rating-participants">2-6 participants</p>
@@ -261,6 +289,11 @@
           </div>
         </article>
         <article class="challenges-information-article grid2">
+            <img
+          class="challenges-information-img"
+          src="./picture/challenges-information2.png"
+          alt="challenges information image"
+        />
           <div class="challenges-information-container">
             <h3 class="challenges-information-subtitle">
               Play online or visit our venue for one of our 25 escape rooms
@@ -271,11 +304,7 @@
             </p>
             <button class="btn-primary-white">See all challenges</button>
           </div>
-          <img
-          class="challenges-information-img"
-          src="./picture/challenges-information2.png"
-          alt="challenges information image"
-        />
+          
         </article>
       </section>
     </main>
@@ -310,5 +339,7 @@
         </ul>
       </section>
     </footer>
+
+    <script src="main.js" type="text/javascript"></script>
   </body>
 </html>
